@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe book</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="container">
+        <div class="logo">My Recipe Book</div>
+        <div class="navbar">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="addrecipe.html">Add Recipe</a>
+                <a href="index.html">Search</a>
+            </nav>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </header>
+    <div class="mobile-nav">
+        <a href="index.html" onclick="toggleMenu()">Home</a>
+        <a href="addrecipe.html" onclick="toggleMenu()">Add Recipe</a>
+        <a href="search.html" onclick="toggleMenu()">Search</a>
+    </div>    
+
+    <main>
+        <div class="search-input">
+            <label for="user-input">Search your desired recipe:</label>
+            <div class="input-container">
+                <input type="text" id="user-input" name="input">
+                <button type="button" class="search-button">Search</button>
+            </div>
+        </div>
+        
+        <div class="list">
+            <div class="card">
+                <img src="./images/Spaghetti Carbonara.jpg" alt="Spaghetti Carbonara image">
+                <h3>Spaghetti Carbonara</h3>
+                <h4>Description:</h4>
+                <p>A classic Italian pasta dish made with eggs, cheese, pancetta, and pepper. It's creamy, savory, and absolutely delicious.</p>
+                <button class="delete-button" onclick="deleteRecipe(event, 'Spaghetti Carbonara')">Delete</button>
+            </div>
+            <div class="card">
+                <img src="./images/chicken-tikka-masala.JPG" alt="chicken-tikka-masala">
+                <h3>Chicken Tikka Masala</h3>
+                <h4>Description:</h4>
+                <p> A popular Indian dish consisting of roasted marinated chicken chunks in spiced curry sauce. Rich, flavorful, and perfect with naan or rice.</p>
+                <button class="delete-button" onclick="deleteRecipe(event, 'Chicken Tikka Masala')">Delete</button>
+            </div>
+            <div class="card">
+                <img src="./images/beef-stroganoff.jpg" alt="Beef Stroganoff">
+                <h3>Beef Stroganoff</h3>
+                <h4>Description:</h4>
+                <p>A Russian dish of sautéed pieces of beef served in a sauce with smetana (sour cream). It's hearty and comforting, often served over egg noodles or rice.</p>
+                <button class="delete-button" onclick="deleteRecipe(event, 'Beef Stroganoff')">Delete</button>
+            </div>
+            <div class="card">
+                <img src="./images/Vegetable-Stir-Fry-.jpg" alt="Vegetable Stir-Fry">
+                <h3>Vegetable Stir-Fry</h3>
+                <h4>Description:</h4>
+                <p>A quick and healthy dish made with a variety of fresh vegetables, stir-fried in a savory sauce. Perfect for a weeknight dinner.</p>
+                <button class="delete-button" onclick="deleteRecipe(event, 'Vegetable Stir-Fry')">Delete</button>
+            </div>
+            <!-- Existing cards end here -->
+        </div>
+    </main>
+    <footer></footer>
+    <script src="main.js"></script>
+</body>
+</html>

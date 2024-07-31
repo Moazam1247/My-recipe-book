@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Recipe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="container">
+        <div class="logo">My Recipe Book</div>
+        <div class="navbar">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="addrecipe.html">Add Recipe</a>
+                <a href="search.html">Search</a>
+            </nav>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </header>
+    <div class="mobile-nav">
+        <a href="index.html" onclick="toggleMenu()">Home</a>
+        <a href="addrecipe.html" onclick="toggleMenu()">Add Recipe</a>
+        <a href="search.html" onclick="toggleMenu()">Search</a>
+    </div>    
+
+    <main>
+        <form class="form" onsubmit="addRecipe(event)">
+            <label for="title">Enter recipe title:</label>
+            <input type="text" name="title" id="recipe-title" required>
+            <label for="ingredients">Ingredients:</label>
+            <input type="text" name="ingredients" id="ingredients-input" required>
+            <label for="instructions">Instructions:</label>
+            <input type="text" name="instructions" id="instructions-input" required>
+            <label for="image">Upload Image:</label>
+            <input type="file" name="image" id="image-upload" required>
+            <div class="button">
+                <button type="submit" id="addbutton">Add Recipe</button>
+            </div>
+        </form>
+        
+        <div id="confirmation" style="display:none;">
+            <p>Your recipe has been added! Please go to the home page to see it.</p>
+            <button onclick="addAnotherRecipe()">Add Another Recipe</button>
+        </div>
+    </main>
+    <footer></footer>
+    <script src="main.js"></script>
+</body>
+</html>
