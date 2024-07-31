@@ -14,7 +14,7 @@ function addRecipe(event) {
 
     const title = document.getElementById('recipe-title').value;
     const ingredients = document.getElementById('ingredients-input').value;
-    const instructions = document.getElementById('instructions-input').value;
+    const instructions = document.getElementId('instructions-input').value;
     const imageInput = document.getElementById('image-upload');
     const imageFile = imageInput.files[0];
 
